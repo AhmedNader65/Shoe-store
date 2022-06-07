@@ -1,33 +1,34 @@
-package com.udacity.shoestore.ui.onboarding
+package com.udacity.shoestore.ui.listing
 
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import androidx.navigation.fragment.findNavController
-import com.udacity.shoestore.databinding.FragmentOnboardingBinding
-import com.udacity.shoestore.databinding.FragmentWelcomeBinding
+import androidx.lifecycle.ViewModelProvider
+import com.udacity.shoestore.databinding.FragmentListingBinding
+import com.udacity.shoestore.ui.login.LoginViewModel
 
-class OnboardingFragment : Fragment() {
+class ListingFragment : Fragment() {
 
-    private var _binding: FragmentOnboardingBinding? = null
+    private lateinit var viewModel: ListingViewModel
+    private var _binding: FragmentListingBinding? = null
     private val binding get() = _binding!!
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        _binding = FragmentOnboardingBinding.inflate(inflater, container, false)
+        viewModel = ViewModelProvider(this)[ListingViewModel::class.java]
+        _binding = FragmentListingBinding.inflate(inflater, container, false)
         val root: View = binding.root
         return root.rootView
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        binding.startBtn.setOnClickListener {
-            findNavController().navigate(OnboardingFragmentDirections.actionOnboardingFragmentToListingFragment())
-        }
+        binding.model = viewModel
+        binding.lifecycleOwner = this
     }
 
     override fun onDestroy() {
