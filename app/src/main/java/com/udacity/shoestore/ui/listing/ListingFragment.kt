@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.fragment.findNavController
 import com.udacity.shoestore.databinding.FragmentListingBinding
 import com.udacity.shoestore.ui.login.LoginViewModel
 
@@ -29,6 +30,9 @@ class ListingFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         binding.model = viewModel
         binding.lifecycleOwner = this
+        binding.fab.setOnClickListener {
+            findNavController().navigate(ListingFragmentDirections.actionListingFragmentToAddShoeFragment())
+        }
     }
 
     override fun onDestroy() {
