@@ -8,7 +8,7 @@
 
         <variable
             name="model"
-            type="com.udacity.shoestore.ui.listing.ListingViewModel" />
+            type="com.udacity.shoestore.ui.ViewModel" />
     </data>
 
 

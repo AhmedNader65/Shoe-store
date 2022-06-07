@@ -16,13 +16,11 @@ class LoginFragment : Fragment() {
     private var _binding: FragmentLoginBinding? = null
     private val binding get() = _binding!!
 
-    private lateinit var viewModel: LoginViewModel
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        viewModel = ViewModelProvider(this)[LoginViewModel::class.java]
         _binding = FragmentLoginBinding.inflate(inflater, container, false)
         val root: View = binding.root
         return root.rootView
