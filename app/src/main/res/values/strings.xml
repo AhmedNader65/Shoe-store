@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">ShoeStore</string>
+    <string name="boost_your">Boost your \nstyle now</string>
+    <string name="boost_your_desc">Appear more confident with the \nbest shoes with elegant designs</string>
+    <string name="sign_up">Sign up</string>
+    <string name="sign_in">Sign in</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="start">Start Now</string>
+</resources>
