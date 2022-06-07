@@ -5,7 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.login.LoginFragment">
+    tools:context=".ui.onboarding.OnboardingFragment">
 
     <View
         android:id="@+id/cyan_box"
@@ -32,7 +32,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="48dp"
         android:layout_marginEnd="48dp"
-        app:cardBackgroundColor="#CEE6CB7B"
+        app:cardBackgroundColor="#D8C48A"
         app:cardCornerRadius="24dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toBottomOf="@id/title">
@@ -43,10 +43,23 @@
             android:orientation="vertical"
             android:padding="16dp">
 
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/animation_view"
+                android:layout_width="wrap_content"
+                android:layout_height="200dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:lottie_autoPlay="true"
+                app:lottie_rawRes="@raw/onboarding" />
+
             <TextView
                 style="@style/headline_text"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:textSize="18sp"
                 android:text="Brand new collections"
                 android:textColor="@color/black" />
 
@@ -56,6 +69,16 @@
                 android:layout_height="wrap_content"
                 android:text="Explore our new collection, new brands, different colors and sizes"
                 android:textColor="@color/black" />
+
+            <Button
+                style="@style/button_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="16dp"
+                android:text="@string/start_now"
+                android:textColor="@color/white"
+                app:backgroundTint="@color/black" />
         </LinearLayout>
     </androidx.cardview.widget.CardView>
 
