@@ -8,10 +8,10 @@ import com.udacity.shoestore.models.Shoe
 
 class ViewModel : ViewModel() {
     private val shoesListing = mutableListOf(
-        Shoe("Nike One", 42, "Nike", "220", "Testing"),
-        Shoe("Nike Go", 44, "Nike", "120", "Testing"),
-        Shoe("Adidas air", 41, "Adidas", "230", "Testing"),
-        Shoe("Adidas Go", 45, "Adidas", "430", "Testing"),
+        Shoe("Nike One", "42", "Nike", "220", "Testing"),
+        Shoe("Nike Go", "44", "Nike", "120", "Testing"),
+        Shoe("Adidas air", "41", "Adidas", "230", "Testing"),
+        Shoe("Adidas Go", "45", "Adidas", "430", "Testing"),
     )
     private val colors = mutableListOf(
         "#F5F1FF",

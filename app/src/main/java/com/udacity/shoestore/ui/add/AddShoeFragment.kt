@@ -20,19 +20,14 @@ class AddShoeFragment : Fragment() {
     ): View {
         _binding = FragmentNewListingBinding.inflate(inflater, container, false)
         val root: View = binding.root
+        binding.shoe = Shoe("","","","","")
         return root.rootView
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding.save.setOnClickListener {
-            val newShoe = Shoe(
-                binding.name.editText?.text.toString(),
-                Integer.valueOf(binding.size.editText?.text.toString()),
-                binding.company.editText?.text.toString(),
-                binding.price.editText?.text.toString(),
-                binding.description.editText?.text.toString()
-            )
+            val newShoe = binding.shoe!!
             findNavController().navigate(
                 AddShoeFragmentDirections.actionAddShoeFragmentToListingFragment(
                     newShoe

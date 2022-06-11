@@ -1,4 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!--using constaint layout here to make the flat layout with many nested views-->
+<!--and to accomplish the wanted design easily with chains-->
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"

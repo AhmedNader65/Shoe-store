@@ -7,8 +7,8 @@
     <data>
 
         <variable
-            name="model"
-            type="com.udacity.shoestore.ui.ViewModel" />
+            name="shoe"
+            type="com.udacity.shoestore.models.Shoe" />
     </data>
 
 
@@ -21,11 +21,12 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="48dp"
-            android:layout_marginEnd="48dp"
             android:layout_marginTop="48dp"
+            android:layout_marginEnd="48dp"
             app:cardBackgroundColor="#F5F1FF"
             app:cardCornerRadius="24dp">
-
+<!--            // using ConstraintLayout here just for more practicing -->
+<!--            it could be replaced with LinearLayout here as the layout is not that complex -->
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -80,7 +81,8 @@
                     <com.google.android.material.textfield.TextInputEditText
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:inputType="text" />
+                        android:inputType="text"
+                        android:text="@={shoe.name}" />
                 </com.google.android.material.textfield.TextInputLayout>
 
                 <com.google.android.material.textfield.TextInputLayout
@@ -98,7 +100,8 @@
                     <com.google.android.material.textfield.TextInputEditText
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:inputType="text" />
+                        android:inputType="text"
+                        android:text="@={shoe.company}" />
                 </com.google.android.material.textfield.TextInputLayout>
 
                 <com.google.android.material.textfield.TextInputLayout
@@ -111,12 +114,13 @@
                     android:textColor="@color/black"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/name">
+                    app:layout_constraintTop_toBottomOf="@+id/company">
 
                     <com.google.android.material.textfield.TextInputEditText
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:inputType="numberDecimal" />
+                        android:inputType="numberDecimal"
+                        android:text="@={shoe.price}" />
                 </com.google.android.material.textfield.TextInputLayout>
 
 
@@ -135,7 +139,8 @@
                     <com.google.android.material.textfield.TextInputEditText
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:inputType="numberDecimal" />
+                        android:inputType="numberDecimal"
+                        android:text="@={shoe.size}" />
                 </com.google.android.material.textfield.TextInputLayout>
 
 
@@ -156,7 +161,8 @@
                     <com.google.android.material.textfield.TextInputEditText
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:inputType="text" />
+                        android:inputType="text"
+                        android:text="@={shoe.description}" />
                 </com.google.android.material.textfield.TextInputLayout>
 
                 <Button

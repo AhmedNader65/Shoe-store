@@ -19,7 +19,9 @@
             android:layout_height="match_parent"
             android:fillViewport="true"
             tools:context=".ui.listing.ListingFragment">
-
+<!--            // Using LinearLayout here so we can easily add views dynamically-->
+<!--            // without worrying about the positioning of the newly added views-->
+<!--            // they will be just added vertically -->
             <LinearLayout
                 android:id="@+id/list_parent"
                 android:layout_width="match_parent"
